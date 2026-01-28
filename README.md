@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm AMAN KUMAR</h1>
 <h3 align="center">A passionate developer from India</h3>
 
-- 🔭 I’m currently working on [Nodejs demo app](https://github.com/AmanKumar-St/nodejs-demo-app)
 
-- 🌱 I’m currently learning **Devop,Cybersceurity**
+
+- 🌱 I’m currently learning **AI/ML and DEEP Learning**
 
 - 👯 I’m looking to collaborate on **Devop**
 
