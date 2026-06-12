@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-landing-page",
+  "version": "1.0.0",
+  "description": "Tailwind configuration for static HTML landing page",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}

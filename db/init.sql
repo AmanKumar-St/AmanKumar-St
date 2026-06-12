@@ -1,0 +1,16 @@
+-- Create a table to store contact form messages
+CREATE TABLE IF NOT EXISTS contacts (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert a welcome contact record
+INSERT INTO contacts (name, email, message) 
+VALUES (
+    'Aman Kumar', 
+    'hello@aman.dev', 
+    'Initial test message. Database initialized successfully!'
+);
