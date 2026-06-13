@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --bg-royal-deep: #070B14;
+    --bg-royal-mid: #0E1626;
+    --bg-royal-light: #18253F;
+    --accent-gold: #D4AF37;
+    --accent-gold-light: #F3E5AB;
+    --accent-gold-glow: rgba(212, 175, 55, 0.5);
+    --accent-neon-white: #FFFFFF;
+    --neon-white-glow: rgba(255, 255, 255, 0.8);
+    --neon-cyan-glow: rgba(0, 240, 255, 0.6);
+    --text-main: #E2E8F0;
+    --text-muted: #94A3B8;
+    --card-bg: rgba(24, 37, 63, 0.4);
+    --card-border: rgba(212, 175, 55, 0.2);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-royal-deep);
+    color: var(--text-main);
+    overflow-x: hidden;
+    height: 100vh;
+    perspective: 1000px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-royal-deep);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-royal-light);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold);
+  }
+}
+
+@keyframes gridMove {
+  0% { transform: rotateX(45deg) translateY(0); }
+  100% { transform: rotateX(45deg) translateY(60px); }
+}
+
+/* Theme Variables for Tailwind */
+@theme {
+  --color-royal-deep: #070B14;
+  --color-royal-mid: #0E1626;
+  --color-royal-light: #18253F;
+  --color-accent-gold: #D4AF37;
+  --color-accent-gold-light: #F3E5AB;
+  --color-text-main: #E2E8F0;
+  --color-text-muted: #94A3B8;
+  
+  --font-cinzel: 'Cinzel', serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
