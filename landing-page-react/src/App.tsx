@@ -88,25 +88,29 @@ function App() {
           className="relative w-full h-screen overflow-hidden"
           style={{ opacity: isLoading ? 0 : 1, transition: 'opacity 1s ease-out' }}
         >
-          {/* Content Area - Left Side */}
-          <div className="content-area relative flex items-center h-full pl-[8%] pr-[2%] z-10">
-            {SECTIONS.map((Section, index) => (
-              <div
-                key={index}
-                className="page-section absolute left-[8%] right-[5%] top-1/2 -translate-y-1/2"
-                style={{
-                  opacity: currentSection === index ? 1 : 0,
-                  pointerEvents: currentSection === index ? 'auto' : 'none',
-                  transition: 'opacity 0.5s ease-out',
-                }}
-              >
-                <Section />
-              </div>
-            ))}
+          <div className="flex h-full">
+            {/* Content Area - Left Side */}
+            <div className="content-area relative flex items-center h-full px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 z-10 w-full lg:w-[60%] xl:w-[65%]">
+              {SECTIONS.map((Section, index) => (
+                <div
+                  key={index}
+                  className="page-section absolute left-6 right-4 sm:left-8 sm:right-6 md:left-10 md:right-8 lg:left-12 lg:right-4 xl:left-16 xl:right-8 top-1/2 -translate-y-1/2 w-auto"
+                  style={{
+                    opacity: currentSection === index ? 1 : 0,
+                    pointerEvents: currentSection === index ? 'auto' : 'none',
+                    transition: 'opacity 0.5s ease-out',
+                  }}
+                >
+                  <Section />
+                </div>
+              ))}
+            </div>
+            
+            {/* Circular Navigation - Right Side (Desktop only) */}
+            <div className="hidden lg:flex flex-[0_0_40%] xl:flex-[0_0_35%] h-full relative items-center justify-center">
+              <CircularNav onNavigate={navigateTo} />
+            </div>
           </div>
-          
-          {/* Circular Navigation - Right Side */}
-          <CircularNav onNavigate={navigateTo} />
           
           {/* Mobile Navigation - Bottom */}
           <MobileNav onNavigate={navigateTo} />
